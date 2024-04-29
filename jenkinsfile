@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                // Specify the correct path to the pom.xml file
+                sh 'mvn -B -f /path/to/your/pom.xml clean package' 
             }
         }
     }
